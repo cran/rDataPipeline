@@ -1,6 +1,8 @@
 #' Post entry to code_repo_release table
 #'
 #' Upload information to the \code{code_repo_release} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param name a \code{string} specifying the name of an official release of
 #' code
@@ -17,7 +19,7 @@ new_code_repo_release <- function(name,
                                   version,
                                   object_url,
                                   website,
-                                  endpoint = "http://localhost:8000/api/") {
+                                  endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list(name = name,
                version = version,

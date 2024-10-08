@@ -1,6 +1,8 @@
 #' Post entry to user_author table
 #'
 #' Upload information to the \code{user_author} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param user_url a \code{string} specifying the URL of an existing
 #' \code{user}
@@ -12,7 +14,7 @@
 #'
 new_user_author <- function(user_url,
                             author_url,
-                            endpoint = "http://localhost:8000/api/") {
+                            endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list(user = user_url,
                author = author_url)

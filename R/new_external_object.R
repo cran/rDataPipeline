@@ -1,6 +1,8 @@
 #' Post entry to external_object table
 #'
 #' Upload information to the \code{external_object} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param doi_or_unique_name a \code{string} specifying the DOI or name of the
 #' \code{external_object}
@@ -28,7 +30,7 @@ new_external_object <- function(doi_or_unique_name,
                                 description,
                                 data_product_url,
                                 original_store_url,
-                                endpoint = "http://localhost:8000/api/") {
+                                endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list(doi_or_unique_name = doi_or_unique_name,
                release_date = release_date,

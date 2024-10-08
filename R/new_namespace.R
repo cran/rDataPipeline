@@ -1,6 +1,8 @@
 #' Post entry to namespace table
 #'
 #' Upload information to the \code{namespace} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param name a \code{string} specifying the name of the namespace
 #' @param full_name (optional) a \code{string} specifying the full name of the
@@ -14,7 +16,7 @@
 new_namespace <- function(name,
                           full_name,
                           website,
-                          endpoint = "http://localhost:8000/api/") {
+                          endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list(name = name)
 

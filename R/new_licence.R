@@ -1,6 +1,8 @@
 #' Post entry to licence table
 #'
 #' Upload information to the \code{licence} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param object_url a \code{string} specifying the URL of an \code{object}
 #' @param licence_info a free text \code{string} containing information about
@@ -11,7 +13,7 @@
 #'
 new_licence <- function(object_url,
                         licence_info,
-                        endpoint = "http://localhost:8000/api/") {
+                        endpoint = "http://127.0.0.1:8000/api/") {
 
   post_data(table = "licence",
             data =  list(object = object_url,

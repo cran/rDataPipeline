@@ -1,6 +1,8 @@
 #' Post entry to keyword table
 #'
 #' Upload information to the \code{keyword} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param object_url a \code{string} specifying the URL of an \code{object}
 #' @param keyphrase a \code{string} a \code{string} containing a free text
@@ -14,7 +16,7 @@
 new_keyword <- function(object_url,
                         keyphrase,
                         identifier,
-                        endpoint = "http://localhost:8000/api/") {
+                        endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list(object = object_url,
                keyphrase = keyphrase)

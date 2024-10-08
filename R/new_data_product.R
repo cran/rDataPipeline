@@ -1,6 +1,8 @@
 #' Post entry to data_product table
 #'
 #' Upload information to the \code{data_product} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param name a \code{string} specifying the name of the \code{data_product}
 #' @param version a \code{string} specifying the version identifier of the
@@ -17,7 +19,7 @@ new_data_product <- function(name,
                              version,
                              object_url,
                              namespace_url,
-                             endpoint = "http://localhost:8000/api/") {
+                             endpoint = "http://127.0.0.1:8000/api/") {
 
   post_data(table = "data_product",
             data =  list(name = name,

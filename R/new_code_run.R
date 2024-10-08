@@ -1,6 +1,8 @@
 #' Post entry to code_run table
 #'
 #' Upload information to the \code{code_run} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param run_date the date-time of the \code{code_run}
 #' *e.g.* \code{Sys.time()} or "2010-07-11 12:15:00 BST"
@@ -29,7 +31,7 @@ new_code_run <- function(run_date,
                          submission_script_url,
                          inputs_urls = list(),
                          outputs_urls = list(),
-                         endpoint = "http://localhost:8000/api/") {
+                         endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list(run_date = run_date,
                inputs = inputs_urls,

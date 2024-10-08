@@ -1,6 +1,8 @@
 #' Get fields from table
 #'
 #' Use API endpoint to produce a list of fields for a table. Requires API key.
+#' 
+#' @keywords internal
 #'
 #' @param table a \code{string} specifying the name of the table
 #' @param endpoint a \code{string} specifying the registry endpoint
@@ -8,7 +10,7 @@
 #' @return Returns a \code{data.frame} of fields and their attributes set to
 #' "none"
 #'
-get_fields <- function(table, endpoint = "http://localhost:8000/api/") {
+get_fields <- function(table, endpoint = "http://127.0.0.1:8000/api/") {
 
   # Add token to options request header
   key <- get_token()

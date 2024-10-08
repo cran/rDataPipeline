@@ -4,7 +4,7 @@
 \alias{new_storage_root}
 \title{Post entry to storage_root table}
 \usage{
-new_storage_root(root, local, endpoint = "http://localhost:8000/api/")
+new_storage_root(root, local, endpoint = "http://127.0.0.1:8000/api/")
 }
 \arguments{
 \item{root}{a \code{string} specifying the URI of a
@@ -31,10 +31,11 @@ Other new functions:
 \code{\link{new_keyword}()},
 \code{\link{new_licence}()},
 \code{\link{new_namespace}()},
-\code{\link{new_object_component}()},
 \code{\link{new_object}()},
+\code{\link{new_object_component}()},
 \code{\link{new_quality_controlled}()},
 \code{\link{new_storage_location}()},
 \code{\link{new_user_author}()}
 }
 \concept{new functions}
+\keyword{internal}

@@ -1,6 +1,8 @@
 #' Post entry to issue table
 #'
 #' Upload information to the \code{issue} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param severity an \code{integer} specifying the severity of the \code{issue}
 #' @param description a \code{string} containing a free text description of the
@@ -14,7 +16,7 @@
 new_issue <- function(severity,
                       description,
                       component_issues,
-                      endpoint = "http://localhost:8000/api/") {
+                      endpoint = "http://127.0.0.1:8000/api/") {
 
   post_data(table = "issue",
             data =  list(severity = severity,

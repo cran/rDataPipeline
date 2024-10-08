@@ -4,7 +4,7 @@
 \alias{new_quality_controlled}
 \title{Post entry to quality_controlled table}
 \usage{
-new_quality_controlled(object_url, endpoint = "http://localhost:8000/api/")
+new_quality_controlled(object_url, endpoint = "http://127.0.0.1:8000/api/")
 }
 \arguments{
 \item{object_url}{a \code{string} specifying the URL of an \code{object}}
@@ -27,10 +27,11 @@ Other new functions:
 \code{\link{new_keyword}()},
 \code{\link{new_licence}()},
 \code{\link{new_namespace}()},
-\code{\link{new_object_component}()},
 \code{\link{new_object}()},
+\code{\link{new_object_component}()},
 \code{\link{new_storage_location}()},
 \code{\link{new_storage_root}()},
 \code{\link{new_user_author}()}
 }
 \concept{new functions}
+\keyword{internal}

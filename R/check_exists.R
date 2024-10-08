@@ -1,6 +1,8 @@
 #' Check if entry exists in the data registry
 #'
 #' Check whether an entry already exists in a table (in the data registry)
+#' 
+#' @keywords internal
 #'
 #' @param table a \code{string} specifying the name of the table
 #' @param query a \code{list} containing a valid query for the table, *e.g.*
@@ -12,7 +14,7 @@
 check_exists <- function(table,
                          query) {
 
-  output <- httr::GET(paste0("http://localhost:8000/api/", table, ""),
+  output <- httr::GET(paste0("http://127.0.0.1:8000/api/", table, ""),
                       query = query)
 
   if (any(names(output) == "status_code")) {

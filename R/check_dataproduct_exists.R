@@ -2,6 +2,8 @@
 #'
 #' If a data product already exists with the same name, version, and
 #' namespace, throw an error
+#' 
+#' @keywords internal
 #'
 #' @param write_dataproduct write_dataproduct
 #' @param write_version write_version
@@ -19,7 +21,7 @@ check_dataproduct_exists <- function(write_dataproduct,
                                  namespace = write_namespace_id),
                             endpoint = endpoint)
 
-  write_namespace_url <- file.path("http://localhost:8000", "api",
+  write_namespace_url <- file.path("http://127.0.0.1:8000", "api",
                                    "namespace", write_namespace_id)
   write_namespace <- get_entity(write_namespace_url)$name
 

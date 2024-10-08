@@ -1,6 +1,8 @@
 #' Post entry to object table
 #'
 #' Upload information to the \code{object} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param description (optional) a \code{string} containing a free text
 #' description of the \code{object}
@@ -18,7 +20,7 @@ new_object <- function(description,
                        storage_location_url,
                        authors_url,
                        file_type_url,
-                       endpoint = "http://localhost:8000/api/") {
+                       endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list()
 

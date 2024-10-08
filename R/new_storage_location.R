@@ -1,6 +1,8 @@
 #' Post entry to storage_location table
 #'
 #' Upload information to the \code{storage_location} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param path a \code{string} specifying the path from the \code{storage_root}
 #' URI to the item location, which when appended to \code{storage_root} URI
@@ -19,7 +21,7 @@ new_storage_location <- function(path,
                                  hash,
                                  public,
                                  storage_root_url,
-                                 endpoint = "http://localhost:8000/api/") {
+                                 endpoint = "http://127.0.0.1:8000/api/") {
   data <- list(path = path,
                hash = hash,
                storage_root = storage_root_url)

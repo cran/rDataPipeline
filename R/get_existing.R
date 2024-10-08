@@ -1,6 +1,8 @@
 #' Return all entries posted to a table in the data registry
 #'
 #' Get entries (from the data registry) in a particular table
+#' 
+#' @keywords internal
 #'
 #' @param table a \code{string} specifying the name of the table
 #' @param limit_results a \code{boolean} specifying whether or not to limit
@@ -17,7 +19,7 @@
 get_existing <- function(table,
                          limit_results = TRUE,
                          detail = "all",
-                         endpoint = "http://localhost:8000/api/") {
+                         endpoint = "http://127.0.0.1:8000/api/") {
 
   if (!check_table_exists(table))
     usethis::ui_stop(paste(

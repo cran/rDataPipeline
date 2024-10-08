@@ -16,10 +16,13 @@ post_data <- function(table, data, endpoint) {
 
   api_url <- paste0(endpoint, table)
   api_url <- file.path(dirname(api_url), basename(api_url), "")
+  if(substring(api_url,nchar(api_url)) != "/"){
+    api_url <- paste0(api_url, "/")
+  }
 
   # Sometimes an error is returned from the local registry:
   #   "Error in curl::curl_fetch_memory(url, handle = handle) :
-  #    Failed to connect to localhost port 8000: Connection refused"
+  #    Failed to connect to 127.0.0.1 port 8000: Connection refused"
   # Repeating the action works eventually...
   continue <- TRUE
   while (continue) {

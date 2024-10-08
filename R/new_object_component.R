@@ -1,6 +1,8 @@
 #' Post entry to object_component table
 #'
 #' Upload information to the \code{object_component} table in the data registry
+#' 
+#' @keywords internal
 #'
 #' @param object_url a \code{string} specifying the URL of an existing
 #' \code{object}
@@ -28,7 +30,7 @@ new_object_component <- function(object_url,
                                  description,
                                  whole_object = FALSE,
                                  issues_urls,
-                                 endpoint = "http://localhost:8000/api/") {
+                                 endpoint = "http://127.0.0.1:8000/api/") {
 
   data <- list(object = object_url,
                name = name,

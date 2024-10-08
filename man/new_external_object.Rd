@@ -12,7 +12,7 @@ new_external_object(
   description,
   data_product_url,
   original_store_url,
-  endpoint = "http://localhost:8000/api/"
+  endpoint = "http://127.0.0.1:8000/api/"
 )
 }
 \arguments{
@@ -54,11 +54,12 @@ Other new functions:
 \code{\link{new_keyword}()},
 \code{\link{new_licence}()},
 \code{\link{new_namespace}()},
-\code{\link{new_object_component}()},
 \code{\link{new_object}()},
+\code{\link{new_object_component}()},
 \code{\link{new_quality_controlled}()},
 \code{\link{new_storage_location}()},
 \code{\link{new_storage_root}()},
 \code{\link{new_user_author}()}
 }
 \concept{new functions}
+\keyword{internal}
